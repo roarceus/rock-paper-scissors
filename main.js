@@ -1,9 +1,9 @@
 const selectionButtons = document.querySelectorAll('[data-selection]');
 const playButtons = document.querySelector('.selections');
 const results = document.querySelector('.results')
-const restartContainer = document.querySelector('.restart');
-const restartBtn = document.querySelector('.restart-button');
-const historyContainer = document.querySelector('.history');
+const restartContainer = document.querySelector('.restart-container');
+const restartBtn = document.querySelector('.restart-btn');
+const historyContainer = document.querySelector('.history-title');
 const history = document.querySelector('.history-result');
 const yourScore = document.querySelector('[data-your-score]');
 const computerScore = document.querySelector('[data-computer-score]');
@@ -54,7 +54,7 @@ function makeSelection(selection) {
 function addSelectionResult(selection, winner) {
     const div = document.createElement('div');
     div.innerText = selection.emoji;
-    div.classList.add('result-selection');
+    div.classList.add('result-selection', 'mb-4');
     if (winner) div.classList.add('winner');
     history.after(div)
 }
